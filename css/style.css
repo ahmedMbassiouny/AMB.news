@@ -1,0 +1,30 @@
+.click-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.71);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+  z-index: 100;
+  /* overflow: hidden; */
+}
+.main-card {
+  box-shadow: 0 0 40px #ffffff4e !important;
+}
+.main-card .close {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  color: #ead2d2;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="background: #1c2135;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+    style="background: #24293b !important;box-shadow: 0 0 20px #000000a1">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3 d-flex align-items-center fw-bold fs-3" style="color: #1190c2;" href="#">AMB<span
+          style="color: #bbb3b3; font-weight: bold">.News</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav myCountry ms-auto pe-5 me-2 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link coun-ele " href="#" onclick="setCountry('eg',this)">Egypt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link coun-ele active" href="#" onclick="setCountry('us',this)">America</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link coun-ele" href="#" onclick="setCountry('ae',this)">Emirates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link coun-ele" href="#" onclick="setCountry('ua',this)">Ukraine</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Category
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+          </li>
+          <li><a class="dropdown-item cate-ele" href="#" onclick="setCategory('Technology',this)">Technology</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item cate-ele active" href="#" onclick="setCategory('Science',this)">Science</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item cate-ele" href="#" onclick="setCategory('Sports',this)">Sports</a></li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="news-title text-white text-center pt-5 fs-4" id="news-title"></div>
+  
+  <div class="container mt-5">
+    <div class="row justify-content-center gap-4 " id="rowData">
+      <!-- my fake data if api not work -->
+      <div class="card  px-0 text-white   " id="c-0"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img src="https://static.www.nfl.com/image/private/t_editorial_landscape_12_desktop/league/fzd0sodajazky51fzqrs"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">NFL rookie rankings at Q1 of 2023 season: Multiple representatives for Texans, Lions,
+            Patriots - NFL.com</h5>
+          <p class="card-text text-white-50">Ahmed Bassiouny</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-0')[0].style.display='flex'">NFL News</p>
+        </div>
+      </div>
+      <div class="click-card c-0">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-0')[0].style.display='none';">×</p>
+          <img
+            src="https://static.www.nfl.com/image/private/t_editorial_landscape_12_desktop/league/fzd0sodajazky51fzqrs"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">NFL rookie rankings at Q1 of 2023 season: Multiple representatives for Texans, Lions,
+              Patriots - NFL.com</h4>
+            <p class="pt-3">Marc Ross identifies his top 25 rookies at the quarter mark of the 2023 NFL season. The
+              Texans,
+              one of three teams with multiple representatives in the rankings, lead the way with four players on the
+              list.
+            </p>
+            <p class="card-text text-white-50">Ahmed Bassiouny</p>
+            <a class="btn btn-primary"
+              href="https://www.nfl.com/news/nfl-rookie-rankings-at-q1-of-2023-season-multiple-representatives-for-texans-lio">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+      <div class="card  px-0 text-white   " id="c-1"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img
+          src="https://media.cnn.com/api/v1/images/stellar/prod/231006200716-simone-biles-tease.jpg?c=16x9&amp;q=w_800,c_fill"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Simone Biles wins women’s all-around final to secure record 21st world championship
+            gold
+            medal - CNN</h5>
+          <p class="card-text text-white-50">Ben Morse</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-1')[0].style.display='flex'">CNN</p>
+        </div>
+      </div>
+      <div class="click-card c-1">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-1')[0].style.display='none';">×</p>
+          <img
+            src="https://media.cnn.com/api/v1/images/stellar/prod/231006200716-simone-biles-tease.jpg?c=16x9&amp;q=w_800,c_fill"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Simone Biles wins women’s all-around final to secure record 21st world championship
+              gold
+              medal - CNN</h4>
+            <p class="pt-3">Simone Biles continued to make history at the World Artistic Gymnastics Championships,
+              winning
+              the women’s individual all-around final on Friday to secure her 21st world championship gold medal.</p>
+            <p class="card-text text-white-50">Ben Morse</p>
+            <a class="btn btn-primary"
+              href="https://www.cnn.com/2023/10/06/sport/simone-biles-history-world-championships-spt-intl/index.html">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-2"
+        style="width: 20rem; background: rgb(34, 42, 63); box-shadow: rgba(0, 0, 0, 0.63) 0px 0px 20px; transition: all 0.8s ease 0s; transform: translateY(0px);"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img
+          src="https://nbcsports.brightspotcdn.com/dims4/default/c91fbd6/2147483647/strip/true/crop/5760x3240+0+300/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fe4%2F40%2Ff6314e8f4429a9f3768f00a6110f%2Fhttps-api-imagn.com%2Frest%2Fdownload%2FimageID%3D21303355"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Broncos ultimately trade Randy Gregory to 49ers - NBC Sports</h5>
+          <p class="card-text text-white-50">Mike Florio</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-2')[0].style.display='flex'">NBCSports.com</p>
+        </div>
+      </div>
+      <div class="click-card c-2">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-2')[0].style.display='none';">×</p>
+          <img
+            src="https://nbcsports.brightspotcdn.com/dims4/default/c91fbd6/2147483647/strip/true/crop/5760x3240+0+300/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fe4%2F40%2Ff6314e8f4429a9f3768f00a6110f%2Fhttps-api-imagn.com%2Frest%2Fdownload%2FimageID%3D21303355"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Broncos ultimately trade Randy Gregory to 49ers - NBC Sports</h4>
+            <p class="pt-3">With release looming, a suitor was found for a swap of 6/7th round picks.</p>
+            <p class="card-text text-white-50">Mike Florio</p>
+            <a class="btn btn-primary"
+              href="https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/broncos-ultimately-trade-randy-gregory-to-49ers">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-3"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img
+          src="https://cdn.vox-cdn.com/thumbor/wHDkgEIv8WVXBajnN5BoON6gFZY=/0x190:2400x1447/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/24937612/usa_today_21443053.jpg"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Lions injury report: Amon-Ra St. Brown doubtful, Jahmyr Gibbs questionable - Pride Of
+            Detroit</h5>
+          <p class="card-text text-white-50">Erik Schlitt</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-3')[0].style.display='flex'">Prideofdetroit.com</p>
+        </div>
+      </div>
+      <div class="click-card c-3">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-3')[0].style.display='none';">×</p>
+          <img
+            src="https://cdn.vox-cdn.com/thumbor/wHDkgEIv8WVXBajnN5BoON6gFZY=/0x190:2400x1447/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/24937612/usa_today_21443053.jpg"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Lions injury report: Amon-Ra St. Brown doubtful, Jahmyr Gibbs questionable - Pride Of
+              Detroit</h4>
+            <p class="pt-3">Checking in on the Detroit Lions' Week 5 injury designations, as they prepare to take on the
+              Carolina Panthers.</p>
+            <p class="card-text text-white-50">Erik Schlitt</p>
+            <a class="btn btn-primary"
+              href="https://www.prideofdetroit.com/2023/10/6/23905371/detroit-lions-week-5-injury-designations-amon-ra-st-brown-doubtful-jahmy-gibbs-questionable">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-4"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img src="https://cdn.theathletic.com/app/uploads/2023/10/06122746/GettyImages-1710452232.jpg"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Until Saturday Week 6 college football predictions: Texas-Oklahoma, Georgia-Kentucky,
+            Alabama-Texas A&amp;M and more - The Athletic</h5>
+          <p class="card-text text-white-50">David Ubben, Ari Wasserman and more</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-4')[0].style.display='flex'">The Athletic</p>
+        </div>
+      </div>
+      <div class="click-card c-4">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-4')[0].style.display='none';">×</p>
+          <img src="https://cdn.theathletic.com/app/uploads/2023/10/06122746/GettyImages-1710452232.jpg"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Until Saturday Week 6 college football predictions: Texas-Oklahoma, Georgia-Kentucky,
+              Alabama-Texas A&amp;M and more - The Athletic</h4>
+            <p class="pt-3">Ari Wasserman, David Ubben and Seth Emerson go through the biggest college football games of
+              Week 6 and make picks against the spread.</p>
+            <p class="card-text text-white-50">David Ubben, Ari Wasserman and more</p>
+            <a class="btn btn-primary"
+              href="https://theathletic.com/4937495/2023/10/06/until-saturday-week-6-college-football-predictions/">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-5"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img
+          src="https://nbcsports.brightspotcdn.com/dims4/default/3c64a18/2147483647/strip/true/crop/5065x2849+0+264/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2Faf%2F71%2F28434cd54111845b615ac662f1cf%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F1717910871"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Travis Kelce responds to "Mr. Pfizer" label from Aaron Rodgers - NBC Sports</h5>
+          <p class="card-text text-white-50">Mike Florio</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-5')[0].style.display='flex'">NBCSports.com</p>
+        </div>
+      </div>
+      <div class="click-card c-5">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-5')[0].style.display='none';">×</p>
+          <img
+            src="https://nbcsports.brightspotcdn.com/dims4/default/3c64a18/2147483647/strip/true/crop/5065x2849+0+264/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2Faf%2F71%2F28434cd54111845b615ac662f1cf%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F1717910871"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Travis Kelce responds to "Mr. Pfizer" label from Aaron Rodgers - NBC Sports</h4>
+            <p class="pt-3">On Tuesday, Jets quarterback Aaron Rodgers referred (jokingly, gratuitously, and arguably
+              derisively) to Chiefs tight end Travis Kelce as "Mr.</p>
+            <p class="card-text text-white-50">Mike Florio</p>
+            <a class="btn btn-primary"
+              href="https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/travis-kelce-responds-to-mr-pfizer-label-from-aaron-rodgers">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-6"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img
+          src="https://chorus.stimg.co/24983133/merlin_72228178.jpg?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Twins say Bailey Ober will start Game 1 against Astros instead of Joe Ryan - Star
+            Tribune
+          </h5>
+          <p class="card-text text-white-50">Bobby Nightengale, Star Tribune</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-6')[0].style.display='flex'">Minneapolis Star Tribune</p>
+        </div>
+      </div>
+      <div class="click-card c-6">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-6')[0].style.display='none';">×</p>
+          <img
+            src="https://chorus.stimg.co/24983133/merlin_72228178.jpg?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Twins say Bailey Ober will start Game 1 against Astros instead of Joe Ryan - Star
+              Tribune
+            </h4>
+            <p class="pt-3">Joe Ryan had been preparing to start a tiebreaking game against the Blue Jays and Bailey
+              Ober
+              had been held off the wild-card roster.</p>
+            <p class="card-text text-white-50">Bobby Nightengale, Star Tribune</p>
+            <a class="btn btn-primary"
+              href="https://www.startribune.com/twins-astros-alds-bailey-ober-game-1-starting-pitcher-joe-ryan/600310363/">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-7"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img src="https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0714%2Fr1197883_1296x729_16%2D9.jpg"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Giants RB Saquon Barkley questionable for return vs. Dolphins - ESPN - ESPN</h5>
+          <p class="card-text text-white-50">Jordan Raanan</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-7')[0].style.display='flex'">ESPN</p>
+        </div>
+      </div>
+      <div class="click-card c-7">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-7')[0].style.display='none';">×</p>
+          <img src="https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0714%2Fr1197883_1296x729_16%2D9.jpg"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Giants RB Saquon Barkley questionable for return vs. Dolphins - ESPN - ESPN</h4>
+            <p class="pt-3">Giants running back Saquon Barkley was still moving somewhat gingerly on his injured ankle
+              and
+              is listed as questionable to play against the Dolphins.</p>
+            <p class="card-text text-white-50">Jordan Raanan</p>
+            <a class="btn btn-primary"
+              href="https://www.espn.com/nfl/story/_/id/38584936/giants-saquon-barkley-better-spot-no-guarantees-play">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-8"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img src="https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0916%2Fr1225208_1296x729_16%2D9.jpg"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Steelers QB Kenny Pickett (knee) expected to start vs. Ravens - ESPN - ESPN</h5>
+          <p class="card-text text-white-50">Brooke Pryor</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-8')[0].style.display='flex'">ESPN</p>
+        </div>
+      </div>
+      <div class="click-card c-8">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-8')[0].style.display='none';">×</p>
+          <img src="https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0916%2Fr1225208_1296x729_16%2D9.jpg"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Steelers QB Kenny Pickett (knee) expected to start vs. Ravens - ESPN - ESPN</h4>
+            <p class="pt-3">Steelers quarterback Kenny Pickett (left knee) was a full participant at practice on Friday
+              and
+              is expected to start Sunday against the division-leading Ravens.</p>
+            <p class="card-text text-white-50">Brooke Pryor</p>
+            <a class="btn btn-primary"
+              href="https://www.espn.com/nfl/story/_/id/38584902/steelers-qb-kenny-pickett-knee-expected-start-vs-ravens">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-9"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img
+          src="https://cdn.vox-cdn.com/thumbor/_udH-RjCL28KYYFXyG7UeTVcBCQ=/0x0:7518x3936/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/24972042/usa_today_21554251.jpg"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Trail Blazers Center Deandre Ayton Can’t ‘Fade Into The Background’ - Blazer's Edge
+          </h5>
+          <p class="card-text text-white-50">Jeremy_Brener</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-9')[0].style.display='flex'">Blazer's Edge</p>
+        </div>
+      </div>
+      <div class="click-card c-9">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-9')[0].style.display='none';">×</p>
+          <img
+            src="https://cdn.vox-cdn.com/thumbor/_udH-RjCL28KYYFXyG7UeTVcBCQ=/0x0:7518x3936/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/24972042/usa_today_21554251.jpg"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Trail Blazers Center Deandre Ayton Can’t ‘Fade Into The Background’ - Blazer's Edge
+            </h4>
+            <p class="pt-3">Deandre Ayton is entering his first season with the Portland Trail Blazers after being
+              traded
+              for Damian Lillard.</p>
+            <p class="card-text text-white-50">Jeremy_Brener</p>
+            <a class="btn btn-primary"
+              href="https://www.blazersedge.com/2023/10/6/23905783/portland-trail-blazers-center-deandre-ayton-cant-fade-into-the-background-anymore">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-10"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img
+          src="https://nbcsports.brightspotcdn.com/dims4/default/28e5e1b/2147483647/strip/true/crop/9335x5251+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F4b%2F43%2F52dc84bc45ff98f96f50b3e23cad%2Fhttps-api-imagn.com%2Frest%2Fdownload%2FimageID%3D20893486"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Cooper Kupp will be in Rams lineup Sunday - NBC Sports</h5>
+          <p class="card-text text-white-50">Josh Alper</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-10')[0].style.display='flex'">NBCSports.com</p>
+        </div>
+      </div>
+      <div class="click-card c-10">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-10')[0].style.display='none';">×</p>
+          <img
+            src="https://nbcsports.brightspotcdn.com/dims4/default/28e5e1b/2147483647/strip/true/crop/9335x5251+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F4b%2F43%2F52dc84bc45ff98f96f50b3e23cad%2Fhttps-api-imagn.com%2Frest%2Fdownload%2FimageID%3D20893486"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Cooper Kupp will be in Rams lineup Sunday - NBC Sports</h4>
+            <p class="pt-3">The Rams will have wide receiver Cooper Kupp in the lineup against the Eagles this Sunday.
+            </p>
+            <p class="card-text text-white-50">Josh Alper</p>
+            <a class="btn btn-primary"
+              href="https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/cooper-kupp-will-be-in-rams-lineup-sunday">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-11"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img src="images/no-img.png" class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Mets Reportedly Could Land Red Sox Slugger In Free Agency After Strong Season - Sports
+            Illustrated</h5>
+          <p class="card-text text-white-50">Sports Illustrated</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-11')[0].style.display='flex'">Sports Illustrated</p>
+        </div>
+      </div>
+      <div class="click-card c-11">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-11')[0].style.display='none';">×</p>
+          <img src="images/no-img.png" class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Mets Reportedly Could Land Red Sox Slugger In Free Agency After Strong Season -
+              Sports
+              Illustrated</h4>
+            <p class="pt-3">null</p>
+            <p class="card-text text-white-50">Sports Illustrated</p>
+            <a class="btn btn-primary"
+              href="https://www.si.com/mlb/red-sox/news/mets-reportedly-could-land-red-sox-slugger-in-free-agency-after-strong-season-pat3">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-12"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img src="https://cdn-8.motorsport.com/images/amp/0JBaWAO0/s6/formula-1-qatar-gp-2023-pole-m-2.jpg"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">F1 Qatar GP: Verstappen grabs 10th pole amid deleted lap times farce - Motorsport.com
+          </h5>
+          <p class="card-text text-white-50">Alex Kalinauckas</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-12')[0].style.display='flex'">Motorsport.com</p>
+        </div>
+      </div>
+      <div class="click-card c-12">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-12')[0].style.display='none';">×</p>
+          <img src="https://cdn-8.motorsport.com/images/amp/0JBaWAO0/s6/formula-1-qatar-gp-2023-pole-m-2.jpg"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">F1 Qatar GP: Verstappen grabs 10th pole amid deleted lap times farce - Motorsport.com
+            </h4>
+            <p class="pt-3">Max Verstappen grabbed pole position for Formula 1's Qatar GP ahead of Lando Norris before
+              both
+              McLaren drivers got their lap times deleted after the session.</p>
+            <p class="card-text text-white-50">Alex Kalinauckas</p>
+            <a class="btn btn-primary"
+              href="https://www.motorsport.com/f1/news/f1-qatar-gp-verstappen-grabs-10th-pole-amid-deleted-lap-times-farce/10529513/">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-13"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img src="https://cdn.theathletic.com/app/uploads/2023/10/05131939/GettyImages-1498799878-scaled.jpg"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Make your picks for the 2023 NHL prediction contest that’s so easy it’s almost
+            impossible -
+            The Athletic</h5>
+          <p class="card-text text-white-50">Sean McIndoe</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-13')[0].style.display='flex'">The Athletic</p>
+        </div>
+      </div>
+      <div class="click-card c-13">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-13')[0].style.display='none';">×</p>
+          <img src="https://cdn.theathletic.com/app/uploads/2023/10/05131939/GettyImages-1498799878-scaled.jpg"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Make your picks for the 2023 NHL prediction contest that’s so easy it’s almost
+              impossible
+              - The Athletic</h4>
+            <p class="pt-3">Which NHL teams will be good or bad? Which coaches and GMs are on safe ground? Which players
+              will be stars? Let's see what you've got.</p>
+            <p class="card-text text-white-50">Sean McIndoe</p>
+            <a class="btn btn-primary"
+              href="https://theathletic.com/4927891/2023/10/06/nhl-prediction-contest-2023-playoffs-teams/">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-14"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img src="https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F1003%2Fr1233051_1024x576_16%2D9.jpg"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Source -- No Jamal Adams discipline for outburst at doctor - ESPN</h5>
+          <p class="card-text text-white-50">Ahmed Bassiouny</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-14')[0].style.display='flex'">ESPN</p>
+        </div>
+      </div>
+      <div class="click-card c-14">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-14')[0].style.display='none';">×</p>
+          <img src="https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F1003%2Fr1233051_1024x576_16%2D9.jpg"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Source -- No Jamal Adams discipline for outburst at doctor - ESPN</h4>
+            <p class="pt-3">The NFL has decided not to discipline Jamal Adams for his actions toward the independent
+              concussion doctor during Monday night's game against the Giants, a source told ESPN's Adam Schefter.</p>
+            <p class="card-text text-white-50">Ahmed Bassiouny</p>
+            <a class="btn btn-primary"
+              href="https://www.espn.com/nfl/story/_/id/38584599/source-no-discipline-jamal-adams-outburst-doctor">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-15"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img src="https://i.ytimg.com/vi/9gT9Bx_nUd8/maxresdefault.jpg" class="card-img-top" alt="news image"
+          style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Dawson vs Green Weigh-In | UFC Vegas 80 - UFC</h5>
+          <p class="card-text text-white-50">Ahmed Bassiouny</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-15')[0].style.display='flex'">YouTube</p>
+        </div>
+      </div>
+      <div class="click-card c-15">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-15')[0].style.display='none';">×</p>
+          <img src="https://i.ytimg.com/vi/9gT9Bx_nUd8/maxresdefault.jpg" class="card-img-top" alt="news image"
+            style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Dawson vs Green Weigh-In | UFC Vegas 80 - UFC</h4>
+            <p class="pt-3">All athletes competing at UFC Vegas 80 took to the scale on Friday ahead of fight night.
+              Main
+              card action kicks off on Saturday at 7pm ET / 4pm PT.Subscribe ...</p>
+            <p class="card-text text-white-50">Ahmed Bassiouny</p>
+            <a class="btn btn-primary" href="https://www.youtube.com/watch?v=9gT9Bx_nUd8">Source link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-16"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img
+          src="https://s.yimg.com/ny/api/res/1.2/fgqQ3TlChFUMIZ_e6XpQqw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2023-10/5e4084c0-6472-11ee-bffd-af8bba1e68d8"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Jets are ready to play for Nathaniel Hackett — who still hasn't received an apology
+            from
+            Sean Payton - Yahoo Sports</h5>
+          <p class="card-text text-white-50">Jori Epstein</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-16')[0].style.display='flex'">Yahoo Entertainment</p>
+        </div>
+      </div>
+      <div class="click-card c-16">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-16')[0].style.display='none';">×</p>
+          <img
+            src="https://s.yimg.com/ny/api/res/1.2/fgqQ3TlChFUMIZ_e6XpQqw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2023-10/5e4084c0-6472-11ee-bffd-af8bba1e68d8"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Jets are ready to play for Nathaniel Hackett — who still hasn't received an apology
+              from
+              Sean Payton - Yahoo Sports</h4>
+            <p class="pt-3">Hackett is trying to play down Payton's offseason comments, which were critical of the job
+              he
+              did in Denver last year. That doesn't mean this week is the...</p>
+            <p class="card-text text-white-50">Jori Epstein</p>
+            <a class="btn btn-primary"
+              href="https://sports.yahoo.com/jets-are-ready-to-play-for-nathaniel-hackett--who-still-hasnt-received-an-apology-from-sean-payton-180606436.html">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-17"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img src="https://cdn.theathletic.com/app/uploads/2023/10/06071923/USATSI_19197567-scaled-e1696591779728.jpg"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Texas-Oklahoma football, Alabama-Texas A&amp;M huge stakes, plus Alex Golesh’s USF
+            turnaround - The Athletic</h5>
+          <p class="card-text text-white-50">Jayna Bardahl</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-17')[0].style.display='flex'">The Athletic</p>
+        </div>
+      </div>
+      <div class="click-card c-17">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-17')[0].style.display='none';">×</p>
+          <img src="https://cdn.theathletic.com/app/uploads/2023/10/06071923/USATSI_19197567-scaled-e1696591779728.jpg"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Texas-Oklahoma football, Alabama-Texas A&amp;M huge stakes, plus Alex Golesh’s USF
+              turnaround - The Athletic</h4>
+            <p class="pt-3">Welcome to Until Saturday, the five-star college football newsletter.</p>
+            <p class="card-text text-white-50">Jayna Bardahl</p>
+            <a class="btn btn-primary"
+              href="https://theathletic.com/4936758/2023/10/06/texas-oklahoma-texas-am-alabama-until-saturday/">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-18"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img
+          src="https://nbcsports.brightspotcdn.com/dims4/default/db7e659/2147483647/strip/true/crop/3830x2154+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2Faf%2F66%2F498e003e4bd7b0ad220649638827%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F1605547451"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Colts not saying if Jonathan Taylor will play Sunday vs. Titans - NBC Sports</h5>
+          <p class="card-text text-white-50">Michael David Smith</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-18')[0].style.display='flex'">NBCSports.com</p>
+        </div>
+      </div>
+      <div class="click-card c-18">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-18')[0].style.display='none';">×</p>
+          <img
+            src="https://nbcsports.brightspotcdn.com/dims4/default/db7e659/2147483647/strip/true/crop/3830x2154+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2Faf%2F66%2F498e003e4bd7b0ad220649638827%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F1605547451"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Colts not saying if Jonathan Taylor will play Sunday vs. Titans - NBC Sports</h4>
+            <p class="pt-3">Colts running back Jonathan Taylor's status for Sunday's game against the Titans remains
+              unknown.</p>
+            <p class="card-text text-white-50">Michael David Smith</p>
+            <a class="btn btn-primary"
+              href="https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/colts-not-saying-if-jonathan-taylor-will-play-sunday-vs-titans">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card  px-0 text-white   " id="c-19"
+        style="width: 20rem; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s;"
+        onmouseover="this.style.transform='translatey(-12px)'" onmouseout="this.style.transform='translatey(0)'">
+        <img
+          src="https://chorus.stimg.co/24982118/merlin_69593721.jpg?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces"
+          class="card-img-top" alt="news image" style="height:200px">
+        <div class="card-body">
+          <h5 class="card-title">Minnesota United fires coach Adrian Heath amid late-season freefall - Star Tribune</h5>
+          <p class="card-text text-white-50">Jerry Zgoda, Star Tribune</p>
+          <p class="btn btn-primary" style="background: #843b97;"
+            onclick="document.getElementsByClassName('c-19')[0].style.display='flex'">Minneapolis Star Tribune</p>
+        </div>
+      </div>
+      <div class="click-card c-19">
+        <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
+          style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <p class="close" onclick="document.getElementsByClassName('c-19')[0].style.display='none';">×</p>
+          <img
+            src="https://chorus.stimg.co/24982118/merlin_69593721.jpg?h=630&amp;w=1200&amp;fit=crop&amp;bg=999&amp;crop=faces"
+            class="card-img-top" alt="news image" style="height:300px">
+          <div class="card-body p-3">
+            <h4 class="card-title">Minnesota United fires coach Adrian Heath amid late-season freefall - Star Tribune
+            </h4>
+            <p class="pt-3">The Loons are winless in their past seven games and are coming off a 5-1 loss to Los Angeles
+              FC.
+            </p>
+            <p class="card-text text-white-50">Jerry Zgoda, Star Tribune</p>
+            <a class="btn btn-primary"
+              href="https://www.startribune.com/minnesota-united-fires-coach-adrian-heath-mls-mark-watson/600310293/">Source
+              link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"> </script>
+  <script src="js/main.js"> </script>
+</body>
+
+</html>
