@@ -14,6 +14,8 @@
 }
 .main-card {
   box-shadow: 0 0 40px #ffffff4e !important;
+  height: 80%;
+  overflow-y: scroll;
 }
 .main-card .close {
   position: absolute;
