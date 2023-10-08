@@ -42,10 +42,10 @@ function showPosts() {
         </div>
       </div>
         <div class="click-card c-${i}">
-          <div class="main-card rounded-3 position-absolute overflow-hidden px-0 text-white "
-            style="width: 50%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
+          <div class="main-card rounded-3 position-absolute px-0 text-white "
+            style="width: 75%; background: #222a3f; box-shadow: 0 0 20px #000000a1;transition:.8s; ">
         <p class="close" onclick="document.getElementsByClassName('c-${i}')[0].style.display='none';">&times;</p>
-            <img src=${imageUrl} class="card-img-top" alt="news image" style="height:300px">
+            <img src=${imageUrl} class="card-img-top rounded-3" alt="news image" style="height:280px">
             <div class="card-body p-3">
               <h4 class="card-title">${finalResulte[i].title}</h4>
               <p class="pt-3">${finalResulte[i].description}</p>
